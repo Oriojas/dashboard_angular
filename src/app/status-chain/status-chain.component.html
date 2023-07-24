@@ -1,8 +1,13 @@
 <div class="container">
     <p>Status Chain</p>
-    <button class="btn">
+
+    <button class="btn" (click)="chainData()">
         test
     </button>
-    <br>
-    <p>Status</p>
+    
+    
+    <div *ngIf="resultQuery">
+        <p>Respuesta del servidor: {{ resultQuery | json }}</p>
+    </div>
+    
 </div>
